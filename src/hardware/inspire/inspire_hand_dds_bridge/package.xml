@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>inspire_hand_dds_bridge</name>
+  <version>0.1.0</version>
+  <description>ROS 2 Inspire JointState to Unitree DDS bridge for the G1 Inspire service.</description>
+  <maintainer email="1131359622@qq.com">jiimmy</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>nova2_glove_driver</exec_depend>
+  <exec_depend>nova2_inspire_retarget</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+

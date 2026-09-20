@@ -1,0 +1,7 @@
+/**:
+  ros__parameters:
+    side: left
+    input_topic: /inspire_left/retarget/joint_states
+    dds_topic: rt/inspire/left/cmd
+    network_interface: ""
+    command_speed: 0.5

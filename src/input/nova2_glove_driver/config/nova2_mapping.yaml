@@ -1,0 +1,52 @@
+nova2_glove_driver:
+  ros__parameters:
+    listen_host: 0.0.0.0
+    udp_port: 15020
+    poll_rate_hz: 500.0
+    enable_left: true
+    enable_right: true
+    left_topic: /manus_glove_0
+    right_topic: /manus_glove_1
+    # Windows bridge sends joint positions in millimeters by default.
+    position_scale: 0.001
+    left_flex_sign: 1.0
+    right_flex_sign: 1.0
+    left_thumb_spread_sign: 1.0
+    right_thumb_spread_sign: 1.0
+    timeout_ms: 200
+    publish_raw_nodes: true
+    publish_ergonomics: true
+    use_normalized_flexion: true
+    # normalized_flexion is transported as 0..100 through ManusErgonomics.
+    normalized_flexion_max_degrees: 100.0
+    normalized_thumb_flexion_max: 0.733333
+    normalized_four_finger_flexion_max: 0.928571
+
+    # All channel values are in degrees after Windows UDP radians are converted.
+    # Formula: output = clamp(sign * (raw + offset) * scale, min, max).
+    mapping:
+      ThumbMCPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      # Source is thumb hand_angles_rad[0][0][0] (X), matching arm_hand_teleop.
+      ThumbMCPSpread:  {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 90.0}
+      ThumbPIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      ThumbDIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+
+      IndexMCPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      IndexSpread:     {offset: 0.0, scale: 1.0, sign: 1.0, min: -90.0, max: 90.0}
+      IndexPIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      IndexDIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+
+      MiddleMCPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      MiddleSpread:     {offset: 0.0, scale: 1.0, sign: 1.0, min: -90.0, max: 90.0}
+      MiddlePIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      MiddleDIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+
+      RingMCPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      RingSpread:     {offset: 0.0, scale: 1.0, sign: 1.0, min: -90.0, max: 90.0}
+      RingPIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      RingDIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+
+      PinkyMCPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      PinkySpread:     {offset: 0.0, scale: 1.0, sign: 1.0, min: -90.0, max: 90.0}
+      PinkyPIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}
+      PinkyDIPStretch: {offset: 0.0, scale: 1.0, sign: 1.0, min: 0.0, max: 100.0}

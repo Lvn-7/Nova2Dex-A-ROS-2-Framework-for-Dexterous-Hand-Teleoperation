@@ -1,0 +1,63 @@
+# ROS 2 / colcon
+build/
+install/
+log/
+.colcon/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+
+# C / C++ / CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+Makefile
+*.o
+*.a
+*.so
+*.so.*
+*.dll
+*.lib
+*.exe
+*.pdb
+
+# Editors and operating systems
+.vscode/
+.idea/
+.clangd/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Runtime and diagnostic output
+*.log
+*.bag
+*.db3
+*.mcap
+core
+core.*
+
+# Downloaded Qt files and generated Windows deployments
+windows/nova2_bridge/third_party/*
+!windows/nova2_bridge/third_party/README.md
+windows/nova2_bridge/reader/Release/
+windows/nova2_bridge/reader/build/
+
+# The pinned SenseGlove and BrainCo SDK files are intentionally included.
+# These exceptions override the generic binary-library patterns above.
+!windows/nova2_bridge/sdk/
+!windows/nova2_bridge/sdk/**
+!src/hardware/brainco/revo2_driver/vendor/
+!src/hardware/brainco/revo2_driver/vendor/**

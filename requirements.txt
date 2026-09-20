@@ -1,0 +1,8 @@
+# Python dependencies for the Nova2 -> Revo2 path.
+numpy
+pyyaml
+mujoco
+pyserial
+setuptools
+empy==3.3.4
+catkin_pkg

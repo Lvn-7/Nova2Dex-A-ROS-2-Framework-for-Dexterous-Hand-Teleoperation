@@ -1,0 +1,18 @@
+nova2_inspire_retarget:
+  ros__parameters:
+    # The UDP bridge encodes normalized_flexion as 0..100 in the stretch fields.
+    # Keep the JointState interface in radians for MuJoCo and the G1 DDS bridge.
+    finger_zero_deg: 0.0
+    finger_range_deg: 100.0
+
+    thumb_pitch_zero_deg: 0.0
+    thumb_pitch_range_deg: 100.0
+    thumb_yaw_zero_deg: 0.0
+    thumb_yaw_range_deg: 17.1887
+    # nova2_mapping.yaml already makes left/right spread positive in closing direction.
+    thumb_yaw_sign: 1.0
+
+    left_input_topic: /manus_glove_0
+    right_input_topic: /manus_glove_1
+    left_output_topic: /inspire_left/retarget/joint_states
+    right_output_topic: /inspire_right/retarget/joint_states

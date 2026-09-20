@@ -1,0 +1,10 @@
+revo2_jointstate_to_brainco_dds:
+  ros__parameters:
+    side: left
+    input_topic: /revo2_left/revo2_pid_controller/target_joint_states
+    dds_topic: rt/brainco/left/cmd
+    # Leave empty to use the default DDS interface. Set to e.g. "eth0" if needed.
+    network_interface: ""
+    command_speed: 1.0
+    repeat_count: 1
+    upper_limits_rad: [1.0472, 1.5184, 1.4661, 1.4661, 1.4661, 1.4661]
