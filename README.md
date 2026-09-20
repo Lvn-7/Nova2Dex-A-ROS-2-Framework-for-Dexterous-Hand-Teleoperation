@@ -4,7 +4,7 @@
 
 ## 遥操作演示
 
-▶ [观看 Nova 2 单手遥操作 Inspire 灵巧手演示](assets/videos/singleinspire.mp4)
+![Nova 2 单手遥操作 Inspire 灵巧手](assets/videos/singleinspire.gif)
 
 Nova2Dex 通过 ROS 2 Humble 数据管线，将 SenseGlove Nova 2 手部追踪数据连接至受支持的机器人灵巧手。本仓库包含 Windows 端 Nova 2 读取器、UDP 到 ROS 桥接器、可复用的 ROS 消息接口、动作重定向模块、仿真查看器、硬件驱动以及 Unitree DDS 桥接器。
 
